@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Aparichit</title>
+
+    <link rel="icon" href="Images/Icon.jpg">
+
+    <link rel="stylesheet" href="Confirmation.css">
+
+</head>
+
+<body>
+
+    <div class="confirm-box">
+
+        <video id="confirm-video" src="Videos/Video 2.mp4" autoplay></video>
+
+    </div>
+    <script>
+        document.getElementById('confirm-video').addEventListener('ended', function () {
+            // Hide video container
+            document.querySelector('.confirm-box').style.display = 'none';
+        });
+    </script>
+
+</body>
+
+</html>

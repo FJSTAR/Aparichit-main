@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Aparichit</title>
+
+    <link rel="icon" href="Images/Icon.jpg">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="box-1">
+
+        <video id="intro-video" src="Videos/Video 1.mp4" type="video.mp4" autoplay>
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+    <div class="box-2">
+        <h1>अपरिचित</h1>
+
+        <br>
+
+        <p class="intro">
+            कलयुग अपने अंतिम चरण पर पहुँच चुका है। <br> <br>
+            पाप का घड़ा भर चुका है। <br> <br>
+            सबको अपने पापों का प्रायश्चित करवाने अपरिचित आ रहा है।
+        </p>
+
+        <br>
+
+        <a href="Request.html">
+
+            <button>शिकायत</button>
+
+        </a>
+
+
+    </div>
+
+</body>
+<script>
+    document.getElementById('intro-video').addEventListener('ended', function () {
+        // Hide video container
+        document.querySelector('.box-1').style.display = 'none';
+        // Show the main content
+        document.querySelector('.box-2').style.display = 'block';
+    });
+    // on esc close the video element
+    document.getElementById('intro-video').onkeypress = function(event) {
+        if (event.key === "Escape") {
+            document.querySelector('.box-1').style.display = 'none'; 
+            document.querySelector('.box-2').style.display = 'block';
+        }
+    }
+</script>
+
+</html>
